@@ -1,11 +1,11 @@
 
-// vnesunnytd.cpp : ¶¨Òå DLL Ó¦ÓÃ³ÌĞòµÄµ¼³öº¯Êı¡£
+// vnesunnytd.cpp : å®šä¹‰ DLL åº”ç”¨ç¨‹åºçš„å¯¼å‡ºå‡½æ•°ã€‚
 //
 
 #include "vnesunnytd.h"
 
 ///-------------------------------------------------------------------------------------
-///C++µÄ»Øµ÷º¯Êı½«Êı¾İ±£´æµ½¶ÓÁĞÖĞ
+///C++çš„å›è°ƒå‡½æ•°å°†æ•°æ®ä¿å­˜åˆ°é˜Ÿåˆ—ä¸­
 ///-------------------------------------------------------------------------------------
 
 void TdApi::OnConnect()
@@ -496,7 +496,7 @@ void TdApi::OnRtnAccountStorage(const TapAPIAccountStorageInfo* info)
 };
 
 ///-------------------------------------------------------------------------------------
-///¹¤×÷Ïß³Ì´Ó¶ÓÁĞÖĞÈ¡³öÊı¾İ£¬×ª»¯Îªpython¶ÔÏóºó£¬½øĞĞÍÆËÍ
+///å·¥ä½œçº¿ç¨‹ä»é˜Ÿåˆ—ä¸­å–å‡ºæ•°æ®ï¼Œè½¬åŒ–ä¸ºpythonå¯¹è±¡åï¼Œè¿›è¡Œæ¨é€
 ///-------------------------------------------------------------------------------------
 
 void TdApi::processTask()
@@ -2110,7 +2110,7 @@ void TdApi::processRtnAccountStorage(Task* task)
 };
 
 ///-------------------------------------------------------------------------------------
-///Ö÷¶¯º¯Êı
+///ä¸»åŠ¨å‡½æ•°
 ///-------------------------------------------------------------------------------------
 
 void TdApi::createTapTradeAPI(const dict& req, int& iResult)
@@ -2119,8 +2119,8 @@ void TdApi::createTapTradeAPI(const dict& req, int& iResult)
 	memset(&myreq, 0, sizeof(myreq));
 	getString(req, "AuthCode", myreq.AuthCode);
 	getString(req, "KeyOperationLogPath", myreq.KeyOperationLogPath);
-	this->api = (ITapTradeAPI*)CreateTapTradeAPI(&myreq, iResult); // ´´½¨API½Ó¿Ú¶ÔÏó
-	this->api->SetAPINotify(this);  //×¢²á»Øµ÷º¯Êı¶ÔÏó
+	this->api = (ITapTradeAPI*)CreateTapTradeAPI(&myreq, iResult); // åˆ›å»ºAPIæ¥å£å¯¹è±¡
+	this->api->SetAPINotify(this);  //æ³¨å†Œå›è°ƒå‡½æ•°å¯¹è±¡
 };
 
 void TdApi::release()
@@ -2423,7 +2423,7 @@ int TdApi::qryAccountStorage(int sessionID, const dict& req)
 };
 
 ///-------------------------------------------------------------------------------------
-///Boost.Python·â×°
+///Boost.Pythonå°è£…
 ///-------------------------------------------------------------------------------------
 
 class PyMdApi : public TdApi

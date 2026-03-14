@@ -1,25 +1,25 @@
 #ifndef TAPDATACOLLECTAPI_H
 #define TAPDATACOLLECTAPI_H
 
-//! Ёи╧╕
+//! Ф┬░Е┼÷
 const int TAPIERROR_DataCollect_SUCCEED                                = 0;
-//! ╩Ях║IPй╖╟э
+//! Х▌╥Е▐√IPЕ╓╠Х╢╔
 const int TAPIERROR_IP                                                 = -1;
-//! ╩Ях║MACй╖╟э
+//! Х▌╥Е▐√MACЕ╓╠Х╢╔
 const int TAPIERROR_MAC                                                = -2;
-//! ╩Ях║иХ╠╦цШЁфй╖╟э
+//! Х▌╥Е▐√Х╝╬Е╓┤Е░█Г╖╟Е╓╠Х╢╔
 const int TAPIERROR_ComputerName                                       = -3;
-//! ╩Ях║╡ывВо╣мЁ╟Ф╠╬й╖╟э
+//! Х▌╥Е▐√Ф⌠█Д╫°ГЁ╩Г╩÷Г┴┬Ф°╛Е╓╠Х╢╔
 const int TAPIERROR_OSVersion                                          = -4;
-//! ╩Ях║с╡елпРап╨ей╖╟э
+//! Х▌╥Е▐√Г║╛Г⌡≤Е╨▐Е┬≈Е▐╥Е╓╠Х╢╔
 const int TAPIERROR_HDID                                               = -5;
-//! ╩Ях║CPUпРап╨ей╖╟э
+//! Х▌╥Е▐√CPUЕ╨▐Е┬≈Е▐╥Е╓╠Х╢╔
 const int TAPIERROR_CPUSerialID                                        = -6;
-//! ╩Ях║BIOSпРап╨ей╖╟э
+//! Х▌╥Е▐√BIOSЕ╨▐Е┬≈Е▐╥Е╓╠Х╢╔
 const int TAPIERROR_BIOSSerailID                                       = -7;
-//! ╩Ях║о╣мЁ╥желпео╒й╖╟э
+//! Х▌╥Е▐√ГЁ╩Г╩÷Е┬├Г⌡≤Д©║Ф│╞Е╓╠Х╢╔
 const int TAPIERROR_SysDiskInfo                                        = -8;
-//! ╩Ях║MacOSиХ╠╦пРап╨ей╖╟э
+//! Х▌╥Е▐√MacOSХ╝╬Е╓┤Е╨▐Е┬≈Е▐╥Е╓╠Х╢╔
 const int TAPIERROR_MacOsSerialID                                      = -9;
 
 #if defined WIN32 || defined _WIN64

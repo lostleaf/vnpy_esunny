@@ -3,466 +3,466 @@
 
 //=============================================================================
 /**
- *	\addtogroup G_ERR_INNER_API		TapAPI�ڲ����صĴ����붨�塣
+ *	\addtogroup G_ERR_INNER_API		TapAPI内部返回的错误码定义。
  *	@{
  */
 //=============================================================================
-//! �ɹ�
+//! 成功
 const int TAPIERROR_SUCCEED                                            = 0;
-//! ���ӷ���ʧ��
+//! 连接服务失败
 const int TAPIERROR_ConnectFail                                        = -1;
-//! ��·��֤ʧ��
+//! 链路认证失败
 const int TAPIERROR_LinkAuthFail                                       = -2;
-//! ������ַ������
+//! 主机地址不可用
 const int TAPIERROR_HostUnavailable                                    = -3;
-//! �������ݴ���
+//! 发送数据错误
 const int TAPIERROR_SendDataError                                      = -4;
-//! ���Ա�Ų��Ϸ�
+//! 测试编号不合法
 const int TAPIERROR_TestIDError                                        = -5;
-//! û׼���ò�������
+//! 没准备好测试网络
 const int TAPIERROR_NotReadyTestNetwork                                = -6;
-//! ��ǰ������Ի�û����
+//! 当前网络测试还没结束
 const int TAPIERROR_CurTestNotOver                                     = -7;
-//! û�ÿ��õĽ���ǰ��
+//! 没用可用的接入前置
 const int TAPIERROR_NOFrontAvailable                                   = -8;
-//! ����·��������
+//! 数据路径不可用
 const int TAPIERROR_DataPathAvaiable                                   = -9;
-//! �ظ���¼
+//! 重复登录
 const int TAPIERROR_RepeatLogin                                        = -10;
-//! �ڲ�����	
+//! 内部错误	
 const int TAPIERROR_InnerError                                         = -11;
-//! ��һ������û�н���	
+//! 上一次请求还没有结束	
 const int TAPIERROR_LastReqNotFinish                                   = -12;
-//! ��������Ƿ�	
+//! 输入参数非法	
 const int TAPIERROR_InputValueError                                    = -13;
-//! ��Ȩ�벻�Ϸ�	
+//! 授权码不合法	
 const int TAPIERROR_AuthCode_Invalid                                   = -14;
-//! ��Ȩ�볬��	
+//! 授权码超期	
 const int TAPIERROR_AuthCode_Expired                                   = -15;
-//! ��Ȩ�����Ͳ�ƥ��	
+//! 授权码类型不匹配	
 const int TAPIERROR_AuthCode_TypeNotMatch                              = -16;
-//! API��û��׼����
+//! API还没有准备好
 const int TAPIERROR_API_NotReady                                       = -17;
-//! UDP�˿ڼ���ʧ��
+//! UDP端口监听失败
 const int TAPIERROR_UDP_LISTEN_FAILED                                  = -18;
-//! UDP���ڼ���
+//! UDP正在监听
 const int TAPIERROR_UDP_LISTENING                                      = -19;
-//! �ӿ�δʵ��
+//! 接口未实现
 const int TAPIERROR_NotImplemented                                     = -20;
-//! ÿ�ε�½ֻ��������һ��
+//! 每次登陆只允许调用一次
 const int TAPIERROR_CallOneTimeOnly                                    = -21;
-//! ����Ƶ��̫��
+//! 操作频率太高
 const int TAPIERROR_Frequently                                         = -22;
-//! ��Ϣ�ɼ�����
+//! 信息采集错误
 const int TAPIERROR_DataCollect                                        = -23;
-//! ��Ϣ�ɼ������ʧ��
+//! 信息采集库加载失败
 const int TAPIERROR_DataLoad                                           = -24;
-//! ���м�ģʽ��ֹ���øýӿ�
+//! 非中继模式禁止调用该接口
 const int TAPIERROR_NoRelay                                            = -25;
 /** @}*/
 
 
 //=============================================================================
 /**
- *	\addtogroup G_ERR_INPUT_CHECK		�������������
+ *	\addtogroup G_ERR_INPUT_CHECK		输入参数检查错误
  *	@{
  */
 //=============================================================================
-//! ��������ΪNULL
+//! 输入数据为NULL
 const int TAPIERROR_INPUTERROR_NULL                                    = -10000;
-//! ��������:TAPIYNFLAG
+//! 输入错误的:TAPIYNFLAG
 const int TAPIERROR_INPUTERROR_TAPIYNFLAG                              = -10001;
-//! ��������:TAPILOGLEVEL
+//! 输入错误的:TAPILOGLEVEL
 const int TAPIERROR_INPUTERROR_TAPILOGLEVEL                            = -10002;
-//! ��������:TAPICommodityType
+//! 输入错误的:TAPICommodityType
 const int TAPIERROR_INPUTERROR_TAPICommodityType                       = -10003;
-//! ��������:TAPICallOrPutFlagType
+//! 输入错误的:TAPICallOrPutFlagType
 const int TAPIERROR_INPUTERROR_TAPICallOrPutFlagType                   = -10004;
-//! ��������:TAPIAccountType
+//! 输入错误的:TAPIAccountType
 const int TAPIERROR_INPUTERROR_TAPIAccountType                         = -12001;
-//! ��������:TAPIAccountState
+//! 输入错误的:TAPIAccountState
 const int TAPIERROR_INPUTERROR_TAPIAccountState                        = -12003;
-//! ��������:TAPIAccountFamilyType
+//! 输入错误的:TAPIAccountFamilyType
 const int TAPIERROR_INPUTERROR_TAPIAccountFamilyType                   = -12004;
-//! ��������:TAPIOrderTypeType
+//! 输入错误的:TAPIOrderTypeType
 const int TAPIERROR_INPUTERROR_TAPIOrderTypeType                       = -12005;
-//! ��������:TAPIOrderSourceType
+//! 输入错误的:TAPIOrderSourceType
 const int TAPIERROR_INPUTERROR_TAPIOrderSourceType                     = -12006;
-//! ��������:TAPITimeInForceType
+//! 输入错误的:TAPITimeInForceType
 const int TAPIERROR_INPUTERROR_TAPITimeInForceType                     = -12007;
-//! ��������:TAPISideType
+//! 输入错误的:TAPISideType
 const int TAPIERROR_INPUTERROR_TAPISideType                            = -12008;
-//! ��������:TAPIPositionEffectType
+//! 输入错误的:TAPIPositionEffectType
 const int TAPIERROR_INPUTERROR_TAPIPositionEffectType                  = -12009;
-//! ��������:TAPIHedgeFlagType
+//! 输入错误的:TAPIHedgeFlagType
 const int TAPIERROR_INPUTERROR_TAPIHedgeFlagType                       = -12010;
-//! ��������:TAPIOrderStateType
+//! 输入错误的:TAPIOrderStateType
 const int TAPIERROR_INPUTERROR_TAPIOrderStateType                      = -12011;
-//! ��������:TAPICalculateModeType
+//! 输入错误的:TAPICalculateModeType
 const int TAPIERROR_INPUTERROR_TAPICalculateModeType                   = -12012;
-//! ��������:TAPIMatchSourceType
+//! 输入错误的:TAPIMatchSourceType
 const int TAPIERROR_INPUTERROR_TAPIMatchSourceType                     = -12013;
-//! ��������:TAPIOpenCloseModeType
+//! 输入错误的:TAPIOpenCloseModeType
 const int TAPIERROR_INPUTERROR_TAPIOpenCloseModeType                   = -12014;
-//! ��������:TAPIFutureAlgType
+//! 输入错误的:TAPIFutureAlgType
 const int TAPIERROR_INPUTERROR_TAPIFutureAlgType                       = -12015;
-//! ��������:TAPIOptionAlgType
+//! 输入错误的:TAPIOptionAlgType
 const int TAPIERROR_INPUTERROR_TAPIOptionAlgType                       = -12016;
-//! ��������:TAPIBankAccountLWFlagType
+//! 输入错误的:TAPIBankAccountLWFlagType
 const int TAPIERROR_INPUTERROR_TAPIBankAccountLWFlagType               = -12017;
-//! ��������:TAPIMarginCalculateModeType
+//! 输入错误的:TAPIMarginCalculateModeType
 const int TAPIERROR_INPUTERROR_TAPIMarginCalculateModeType             = -12021;
-//! ��������:TAPIOptionMarginCalculateModeType
+//! 输入错误的:TAPIOptionMarginCalculateModeType
 const int TAPIERROR_INPUTERROR_TAPIOptionMarginCalculateModeType       = -12022;
-//! ��������:TAPICmbDirectType
+//! 输入错误的:TAPICmbDirectType
 const int TAPIERROR_INPUTERROR_TAPICmbDirectType                       = -12023;
-//! ��������:TAPIDeliveryModeType
+//! 输入错误的:TAPIDeliveryModeType
 const int TAPIERROR_INPUTERROR_TAPIDeliveryModeType                    = -12024;
-//! ��������:TAPIContractTypeType
+//! 输入错误的:TAPIContractTypeType
 const int TAPIERROR_INPUTERROR_TAPIContractTypeType                    = -12025;
-//! ��������:TAPITacticsTypeType
+//! 输入错误的:TAPITacticsTypeType
 const int TAPIERROR_INPUTERROR_TAPITacticsTypeType                     = -12035;
-//! ��������:TAPIORDERACT
+//! 输入错误的:TAPIORDERACT
 const int TAPIERROR_INPUTERROR_TAPIORDERACT                            = -12036;
-//! ��������:TAPITriggerConditionType
+//! 输入错误的:TAPITriggerConditionType
 const int TAPIERROR_INPUTERROR_TAPITriggerConditionType                = -12041;
-//! ��������:TAPITriggerPriceTypeType
+//! 输入错误的:TAPITriggerPriceTypeType
 const int TAPIERROR_INPUTERROR_TAPITriggerPriceTypeType                = -12042;
-//! ��������:TAPITradingStateType 
+//! 输入错误的:TAPITradingStateType 
 const int TAPIERROR_INPUTERROR_TAPITradingStateType                    = -12043;
-//! ��������:TAPIMarketLevelType 
+//! 输入错误的:TAPIMarketLevelType 
 const int TAPIERROR_INPUTERROR_TAPIMarketLevelType                     = -12044;
-//! ��������:TAPIOrderQryTypeType 
+//! 输入错误的:TAPIOrderQryTypeType 
 const int TAPIERROR_INPUTERROR_TAPIOrderQryTypeType                    = -12045;
 
 /** @}*/
 
 //=============================================================================
 /**
- *	\addtogroup G_ERR_DISCONNECT_REASON	����Ͽ�������붨��
+ *	\addtogroup G_ERR_DISCONNECT_REASON	网络断开错误代码定义
  *	@{
  */
 //=============================================================================
-//! �����Ͽ�
+//! 主动断开
 const int TAPIERROR_DISCONNECT_CLOSE_INIT                              = 1;
-//! �����Ͽ�
+//! 被动断开
 const int TAPIERROR_DISCONNECT_CLOSE_PASS                              = 2;
-//! ������
+//! 读错误
 const int TAPIERROR_DISCONNECT_READ_ERROR                              = 3;
-//! д����
+//! 写错误
 const int TAPIERROR_DISCONNECT_WRITE_ERROR                             = 4;
-//! ��������
+//! 缓冲区满
 const int TAPIERROR_DISCONNECT_BUF_FULL                                = 5;
-//! �첽��������
+//! 异步操作错误
 const int TAPIERROR_DISCONNECT_IOCP_ERROR                              = 6;
-//! �������ݴ���
+//! 解析数据错误
 const int TAPIERROR_DISCONNECT_PARSE_ERROR                             = 7;
-//! ���ӳ�ʱ
+//! 连接超时
 const int TAPIERROR_DISCONNECT_CONNECT_TIMEOUT                         = 8;
-//! ��ʼ��ʧ��
+//! 初始化失败
 const int TAPIERROR_DISCONNECT_INIT_ERROR                              = 9;
-//! �Ѿ�����
+//! 已经连接
 const int TAPIERROR_DISCONNECT_HAS_CONNECTED                           = 10;
-//! �����߳��ѽ���
+//! 工作线程已结束
 const int TAPIERROR_DISCONNECT_HAS_EXIT                                = 11;
-//! �������ڽ��У����Ժ�����
+//! 操作正在进行，请稍后重试
 const int TAPIERROR_DISCONNECT_TRY_LATER                               = 12;
-//! �������ʧ��
+//! 心跳检测失败
 const int TAPIERROR_DISCONNECT_HEARTBEAT_FAILED                        = 13;
 
 /** @}*/
 
 //=============================================================================
 /**
- *	\addtogroup G_ERR_LOGIN	��½���̷��صĴ�����붨��
+ *	\addtogroup G_ERR_LOGIN	登陆过程返回的错误代码定义
  *	@{
  */
 //=============================================================================
-//! ��¼����ִ�д���
+//! 登录过程执行错误
 const int TAPIERROR_LOGIN                                              = 10001;
-//! ��¼�û�������
+//! 登录用户不存在
 const int TAPIERROR_LOGIN_USER                                         = 10002;
-//! ��Ҫ���ж�̬��֤
+//! 需要进行动态认证
 const int TAPIERROR_LOGIN_DDA                                          = 10003;
-//! ��¼�û�δ��Ȩ
+//! 登录用户未授权
 const int TAPIERROR_LOGIN_LICENSE                                      = 10004;
-//! ��¼ģ�鲻��ȷ
+//! 登录模块不正确
 const int TAPIERROR_LOGIN_MODULE                                       = 10005;
-//! ��Ҫǿ���޸�����
+//! 需要强制修改密码
 const int TAPIERROR_LOGIN_FORCE                                        = 10006;
-//! ��¼״̬��ֹ��½
+//! 登录状态禁止登陆
 const int TAPIERROR_LOGIN_STATE                                        = 10007;
-//! ��¼���벻��ȷ
+//! 登录密码不正确
 const int TAPIERROR_LOGIN_PASS                                         = 10008;
-//! û�и�ģ���¼Ȩ��
+//! 没有该模块登录权限
 const int TAPIERROR_LOGIN_RIGHT                                        = 10009;
-//! ��¼��������
+//! 登录数量超限
 const int TAPIERROR_LOGIN_COUNT                                        = 10010;
-//! ��¼�û����ڷ�������ʶ�¿ɵ�¼�û��б���
+//! 登录用户不在服务器标识下可登录用户列表中
 const int TAPIERROR_LOGIN_NOTIN_SERVERFLAGUSRES                        = 10011;
-//! ��½�û�������Ч��
+//! 登陆用户不在有效期
 const int TAPIERROR_LOGIN_USER_EXPIRED                                 = 10012;
-//! ��½�û��������ͻ�
+//! 登陆用户无下属客户
 const int TAPIERROR_LOGIN_NO_ACCOUNT                                   = 10013;
-//! ��¼�û������ʺ�����Ȩ��δ��������ͨ���
+//! 登录用户是子帐号且授权中未包含机构通标记
 const int TAPIERROR_LOGIN_NO_JGT                                       = 10014;
-//! ��¼�û��������������ޣ���ֹ��½
+//! 登录用户密码错误次数超限，禁止登陆
 const int TAPIERROR_LOGIN_ERROR_TIMES                                  = 10015;
-//! ��¼�û���Ȩ���ʹ���
+//! 登录用户授权类型错误
 const int TAPIERROR_LOGIN_ERROR_AUTHTYPE                               = 10016;
-//! ��¼�û���Ȩ���ڻ����մ���
+//! 登录用户授权到期或到期日错误
 const int TAPIERROR_LOGIN_ERROR_AUTHEXPIRED                            = 10017;
-//! ��¼�û����볬����Ч����
+//! 登录用户密码超过有效天数
 const int TAPIERROR_LOGIN_ERROR_PASSWDEXPIRED                          = 10018;
-//! ��¼�û�δ��Ȩ�ĵ�¼IP��MAC
+//! 登录用户未授权的登录IP和MAC
 const int TAPIERROR_LOGIN_ERROR_USERTRUST                              = 10019;
-//! 8.2�ͻ��˽�ֹ��¼������8.3
+//! 8.2客户端禁止登录请升级8.3
 const int TAPIERROR_LOGIN_ERROR_CLIENTVERSION                          = 10020;
-//! �û���Ȩ��Ϣ����
+//! 用户授权信息错误
 const int TAPIERROR_LOGIN_ERROR_AUTHCODEINFO                           = 10021;
 
 /** @}*/
 
 //=============================================================================
 /**
- *	\addtogroup G_ERR_MANAGE ����ҵ�������ش�����	
+ *	\addtogroup G_ERR_MANAGE 管理业务处理返回错误码	
  *	@{
  */
 //==============================================================================
-//! ��¼�û���Ϣ��ѯʧ��
+//! 登录用户信息查询失败
 const int TAPIERROR_USERINFO_QRY                                       = 10101;
-//! ��¼�û���������Ȩ�޲�ѯʧ��
+//! 登录用户下属所有权限查询失败
 const int TAPIERROR_USERALLRIGHT_QRY                                   = 11001;
-//! ��¼�û����������ʽ��˺Ų�ѯʧ��
+//! 登录用户下属所有资金账号查询失败
 const int TAPIERROR_USERALLACCOUNT_QRY                                 = 11501;
-//! ��¼�û������޸�ʧ��
+//! 登录用户密码修改失败
 const int TAPIERROR_USERPASSWORD_MOD                                   = 11701;
-//! ��¼�û������޸�ʧ�ܡ���ԭʼ�������
+//! 登录用户密码修改失败——原始密码错误
 const int TAPIERROR_USERPASSWORD_MOD_SOURCE                            = 11702;
-//! ��¼�û������޸�ʧ�ܡ���������ǰn��������ͬ
+//! 登录用户密码修改失败——不能与前n次密码相同
 const int TAPIERROR_USERPASSWORD_MOD_SAME                              = 11703;
-//! �����벻�������븴�Ӷ�Ҫ��
+//! 新密码不符合密码复杂度要求
 const int TAPIERROR_USERPASSWORD_MOD_COMPLEXITY                        = 11704;
-//! �ʽ��˺���Ϣ��ѯʧ��
+//! 资金账号信息查询失败
 const int TAPIERROR_ACCOUNTINFO_QRY                                    = 20201;
-//! �ͻ����ױ����ѯʧ��
+//! 客户交易编码查询失败
 const int TAPIERROR_TRADENO_QRY                                        = 20701;
-//! ��Լ��Ϣ��ѯʧ��
+//! 合约信息查询失败
 const int TAPIERROR_CONTRACTINFO_QRY                                   = 22801;
-//! ������Ȩ��Ĳ�ѯʧ��
+//! 特殊期权标的查询失败
 const int TAPIERROR_SPECIALOPTIONFUTURE_QRY                            = 22901;
-//! Ʒ��ί�����Ͳ�ѯʧ��
+//! 品种委托类型查询失败
 const int TAPIERROR_COMMODITYORDERTYPE_QRY                             = 25501;
-//! Ʒ��ί��ʱ����Ч�Բ�ѯʧ��
+//! 品种委托时间有效性查询失败
 const int TAPIERROR_ORDERTIMEINFORCE_QRY                               = 25601;
-//! �û��µ�Ƶ�ʲ�ѯʧ��
+//! 用户下单频率查询失败
 const int TAPIERROR_USER_ORDER_FREQUENCE_QRY                           = 28901;
-//! �ύ��Ϣ�û���Ȩ���ʹ���
+//! 提交信息用户授权类型错误
 const int TAPIERROR_USERSUBMITAUTHTYPE_ERROR                           = 29591;
-//! �û��ɼ��ն�����Ϊ��
+//! 用户采集终端数据为空
 const int TAPIERROR_USERSUBMITINFO_EMPTY                               = 29592;
-//! �û���Կ�汾����
+//! 用户密钥版本错误
 const int TAPIERROR_USERAUTHKEYVERSION_ERROR                           = 29593;
-//! �û��ɼ���Ϣ��ȫ��Ȩ�޲���
+//! 用户采集信息不全，权限不够
 const int TAPIERROR_USERSUBMITINFO_PARTY                               = 29594;
-//! �û��ɼ���Ϣ���ò�����Կ����
+//! 用户采集信息采用测试密钥加密
 const int TAPIERROR_USERSUBMITINFO_TESTKEY                             = 29595;
-//! �û��ɼ���Ϣ�û�������
+//! 用户采集信息用户不存在
 const int TAPIERROR_USERSUBMITINFO_USERNO                              = 29596;
 
 /** @}*/
 
 //=============================================================================
 /**
- *	\addtogroup G_ERR_TRADE ����ҵ�������ش�����	
+ *	\addtogroup G_ERR_TRADE 交易业务处理返回错误码	
  *	@{
  */
 //==============================================================================
-//! �ʽ��˺Ų�����
+//! 资金账号不存在
 const int TAPIERROR_ORDERINSERT_ACCOUNT                                = 60001;
-//! �ʽ��˺�״̬����ȷ
+//! 资金账号状态不正确
 const int TAPIERROR_ORDERINSERT_ACCOUNT_STATE		                   = 60002;
-//! �ʽ��˺���ί�з�����Ȩ��
+//! 资金账号无委托方向交易权限
 const int TAPIERROR_ORDERINSERT_SIDE_TRADE                             = 60003;
-//! �ʽ��˺�����Ȩ����Ȩ��
+//! 资金账号无期权交易权限
 const int TAPIERROR_ORDERINSERT_OPTIONS_TRADE                          = 60004;
-//! �ʽ��˺���Ʒ�ֽ���Ȩ��
+//! 资金账号无品种交易权限
 const int TAPIERROR_ORDERINSERT_COMMODITY_TRADE                        = 60005;
-//! �ʽ��˺��޿���Ȩ��
+//! 资金账号无开仓权限
 const int TAPIERROR_ORDERINSERT_OPEN_RIGHT                             = 60006;
-//! �ʽ��˺ŷ������ʧ��
+//! 资金账号风控项检查失败
 const int TAPIERROR_ORDERINSERT_RISK_CHECK                             = 60007;
-//! �µ���Ч�ĺ�Լ
+//! 下单无效的合约
 const int TAPIERROR_ORDERINSERT_CONTRACT                               = 60011;
-//! �µ���Լ�޽���·��
+//! 下单合约无交易路由
 const int TAPIERROR_ORDERINSERT_TRADEROUTE                             = 60021;
-//! �ֲ��������������
+//! 持仓量超过最大限制
 const int TAPIERROR_ORDERINSERT_POSITIONMAX                            = 60022;
-//! ��ֹ����
+//! 禁止交易
 const int TAPIERROR_ORDER_NOTRADE                                      = 60023;
-//! ֻ��ƽ��
+//! 只可平仓
 const int TAPIERROR_ORDER_CLOSE                                        = 60024;
-//! �µ��ʽ���
+//! 下单资金不足
 const int TAPIERROR_ORDERINSERT_NOTENOUGHFUND                          = 60031;
-//! ��֧�ֵĶ�������
+//! 不支持的订单类型
 const int TAPIERROR_ORDERINSERT_ORDERTYPE                              = 60032;
-//! ��֧�ֵ�ʱ����Ч����
+//! 不支持的时间有效类型
 const int TAPIERROR_ORDERINSERT_TIMEINFORCE                            = 60033;
-//! ��֧�ֵĲ��Ե�����
+//! 不支持的策略单类型
 const int TAPIERROR_ORDERINSERT_NO_TACTICS                             = 60034;
-//! ƽ�������������гֲ���
+//! 平仓数量超过已有持仓量
 const int TAPIERROR_ORDERINSERT_POSITION_CANNOT_CLOSE                  = 60035;
-//! �µ��Զ����ʧ��
+//! 下单自动审核失败
 const int TAPIERROR_ORDERINSERT_AUTOCHECK_FAIL                         = 60036;
-//! LMEδ׼������
+//! LME未准备就绪
 const int TAPIERROR_ORDERINSERT_LME_NOTREADY                           = 60037;
-//! ƽ�ַ�ʽ����
+//! 平仓方式错误
 const int TAPIERROR_ORDERINSERT_CLOSEMODE                              = 60038;
-//! �µ���Ӧ�ĸ��˺��ʽ���
+//! 下单对应的父账号资金不足
 const int TAPIERROR_ORDERINSERT_PARENTNOTENOUGHFUND                    = 60039;
-//! �������ĺ�Լ��ʽ����
+//! 互换单的合约格式错误
 const int TAPIERROR_SWAP_CONTRACT                                      = 60040;
-//! ί�м۸񲻺���
+//! 委托价格不合理
 const int TAPIERROR_ORDERINSERT_PRICE                                  = 60041;
-//! ��ƽ��ǲ�����
+//! 开平标记不合理
 const int TAPIERROR_ORDERINSERT_EFFECT                                 = 60042;
-//! ������Լ����
+//! 关联合约错误
 const int TAPIERROR_ORDERINSERT_TARGETCONTRACT                         = 60043;
-//! ��ǰ�ͻ�����ʹ�ô��˺Ž���
+//! 当前客户不能使用此账号交易
 const int TAPIERROR_USERNO_NOTHAS_ACCOUNT                              = 60051;
-//! ����ͨ��״̬������
+//! 上手通道状态不正常
 const int TAPIERROR_UPPERCHANNEL_BROKEN                                = 60052;
-//! ����ͨ��δ��ͨEXIST
+//! 上手通道未开通EXIST
 const int TAPIERROR_UPPERCHANNEL_NOT_EXIST                             = 60053;
-//! �����޴�ϵͳ��
+//! 撤单无此系统号
 const int TAPIERROR_ORDERDELETE_NOT_SYSNO                              = 60061;
-//! ��״̬����������
+//! 此状态不允许撤单
 const int TAPIERROR_ORDERDELETE_NOT_STATE                              = 60062;
-//! ��״̬����������
+//! 此状态不允许激活
 const int TAPIERROR_ORDERACTIVE_NOT_STATE                              = 60063;
-//! ֻ������������Լ����һ��ί��
+//! 只允许撤销本合约最新一次委托
 const int TAPIERROR_ORDERDELETE_NOT_LAST                                = 60064;
-//! ��״̬��ֹ���
+//! 此状态禁止审核
 const int TAPIERROR_ORDERCHECK_NOT_STATE                               = 60071;
-//! �������ʧ��
+//! 订单审核失败
 const int TAPIERROR_ORDERCHECK_FAIL                                    = 60072;
-//! ��״̬�������ĵ�
+//! 此状态不允许改单
 const int TAPIERROR_ORDERMODIFY_NOT_STATE                              = 60081;
-//! �˹����������ĵ�
+//! 人工单不允许改单
 const int TAPIERROR_ORDERMODIFY_BACK_INPUT                             = 60082;
-//! �����Ѳ�������
+//! 手续费参数错误
 const int TAPIERROR_ORDERINSERT_FEE                                    = 60091;
-//! ��֤���������
+//! 保证金参数错误
 const int TAPIERROR_ORDERINSERT_MARGIN                                 = 60092;
-//! �����˺�ֻ�ɲ�ѯ
+//! 操作账号只可查询
 const int TAPIERROR_ORDER_NO_PERMIT                                    = 60100;
-//! �������̲���Ӧ��
+//! 非做市商不能应价
 const int TAPIERROR_RSPQUOTE_NO_PERMIT                                 = 60101;
-//! ��ʹ���ʺ����������̲���Ӧ��
+//! 即使子帐号又是做市商不能应价
 const int TAPIERROR_RSPQUOTE_CHILD_NO_PERMIT                           = 60102;
-//! �µ��Ҳ������ױ���
+//! 下单找不到交易编码
 const int TAPIERROR_TRADENO_NOT_FIND                                   = 60103;
-//! �����˺�ֻ�ɿ���
+//! 操作账号只可开仓
 const int TAPIERROR_ORDER_NO_CLOSE                                     = 60104;
-//! �����˺�û�����ڹҵ���ѯȨ��
+//! 操作账号没有上期挂单查询权限
 const int TAPIERROR_QRY_QUOTE_NO_PERMIT                                = 60105;
-//! ������Ч������С�ڵ�ǰ������
+//! 限期有效单不能小于当前交易日
 const int TAPIERROR_EXPIREDATE_NO_PERMIT                               = 60106;
-//! �ñ��벻��������������
+//! 该编码不允许申请或拆分组合
 const int TAPIERROR_CMB_NO_PERMIT                                      = 60107;
-//! �Ǳ�����������µ��˺Ų���������
+//! 非本服务器标记下的账号不允许操作
 const int TAPIERROR_ORDERSERVER_NO_PERMIT                              = 60108;
-//! ��Ȩ����Ȩ������������
+//! 行权或弃权量超过可用量
 const int TAPIERROR_POSITION_CANNOT_EXEC_OR_ABANDON                    = 60109;
-//! û�ж������Ȩ��
+//! 没有订单审核权限
 const int TAPIERROR_ORDERCHECK_NO_PERMIT                               = 60110;
-//! ����������󿪲���
+//! 超过当日最大开仓量
 const int TAPIERROR_ORDERMAXOPENVOL_NO_PERMIT                          = 60111;
-//! �ǵ�ͣ������ֹ���򿪲�
+//! 涨跌停附近禁止反向开仓
 const int TAPIERROR_ORDERLIMIT_OPEN_NO_PERMIT                          = 60112;
-//! ������������µ���
+//! 超过单笔最大下单量
 const int TAPIERROR_ORDER_SINGLEVOL_NO_PERMIT                          = 60113;
-//! �������ֲ���
+//! 超过最大持仓量
 const int TAPIERROR_ORDER_POSITIONVOL_NO_PERMIT                        = 60114;
-//! �Ǵ���Ӧ�۵�����������ί������һ��
+//! 非大连应价单不允许两笔委托量不一致
 const int TAPIERROR_ORDER_QTY_NO_PERMIT                                = 60115;
-//! ���벻�����ظ��ύ
+//! 申请不允许重复提交
 const int TAPIERROR_ORDER_APPLY_NO_PERMIT                              = 60117;
-//! �����˺��µ�Ƶ������
+//! 超过账号下单频率限制
 const int TAPIERROR_ORDER_FREQ_OVERRUN                                 = 60118;
-//! ��ϱ������ڵ���Ϸ����Ͷ����־
+//! 组合表不存在的组合方向或投保标志
 const int TAPIERROR_COMB_NO_SIDEORHEDGE                                = 60119;
-//! ��ǰ��Ȩ���ں����۲��Ҫѯ��
+//! 当前期权存在合理价差不需要询价
 const int TAPIERROR_REQQUOTE_EXITREASONABLPRICE                        = 60120;
-//! Ӧ��ί�м۸񲻺���
+//! 应价委托价格不合理
 const int TAPIERROR_RSPQUOTE_PRICE                                     = 60121;
-//! ��ͨ�ͻ�����������ǿƽ��
+//! 普通客户不允许撤销强平单
 const int TAPIERROR_RISKORDER_CANCEL                                   = 60122;
-//! Ӧ��ί�п�ƽ��־����ȷ
+//! 应价委托开平标志不正确
 const int TAPIERROR_RSPQUOTE_EFFECT	                                   = 60123;
-//! ������ʽ����
+//! 买卖方式错误
 const int TAPIERROR_ORDERINSERT_SIDEMODE                               = 60124;
-//! �Զ����������ί������
+//! 自动单超过最大委托数量
 const int TAPIERROR_AUTOORDER_MAXCOUNT                                 = 60125;
-//! ��������������ѯ���󳬹���������
+//! 上期所深度行情查询请求超过最大队列数
 const int TAPIERROR_SHFEDEEPQUOTE_LIMIT                                = 60126;
-//! ��������������ѯ����û������
+//! 上期所深度行情查询请求没有数据
 const int TAPIERROR_SHFEDEEPQUOTE_NODATA                               = 60127;
-//! �����Գɽ�����
+//! 存在自成交可能
 const int TAPIERROR_SELFMATCH                                          = 60128;
-//! ���������������
+//! 错单超过最大数量
 const int TAPIERROR_ERRORORDER_MAXCOUNT                                = 60129;
-//! ����ϯλ�µ�Ƶ������
+//! 超过席位下单频率限制
 const int TAPIERROR_ORDER_UPPERFREQ_OVERRUN                            = 60130;
-//! ��������Ƶ�ʹ���
+//! 订单操作频率过高
 const int TAPIERROR_ORDER_FREQUENCY                                    = 61001;
-//! ί�в�ѯ����ǰ���ܽ����´β�ѯ
+//! 委托查询返回前不能进行下次查询
 const int TAPIERROR_ORDER_QUERYING                                     = 61002;
 
 /** @}*/
 
 //=============================================================================
 /**
- *	\addtogroup G_ERR_QUOTE ����ҵ�������ش�����	
+ *	\addtogroup G_ERR_QUOTE 行情业务处理返回错误码	
  *	@{
  */
 //=============================================================================
-//! ������������ܶ�����
+//! 超过行情最大总订阅数
 const int TAPIERROR_SUBSCRIBEQUOTE_MAX                                 = 72001;
-//! �����ý����������������
+//! 超过该交易所行情最大订阅数
 const int TAPIERROR_SUBSCRIBEQUOTE_EXCHANGE_MAX                        = 72002;
-//! û�и�����Ķ���Ȩ��
+//! 没有该行情的订阅权限
 const int TAPIERROR_SUBSCRIBEQUOTE_NO_RIGHT                            = 72101;
-//! û�иý�����������Ķ���Ȩ��
+//! 没有该交易所下行情的订阅权限
 const int TAPIERROR_SUBSCRIBEQUOTE_NO_EXCHANGE_RIGHT                   = 72102;
-//! Ʒ�ֲ�����
+//! 品种不存在
 const int TAPIERROR_SUBSCRIBEQUOTE_COMMODITY_NOT_EXIST                 = 72103;
-//! ��Լ���ܲ�����
+//! 合约可能不存在
 const int TAPIERROR_SUBSCRIBEQUOTE_CONTRACT_MAY_NOT_EXIST              = 72104;
-//! ��֧�ֵ�����Э��
+//! 不支持的行情协议
 const int TAPIERROR_QUOTEFRONT_UNKNOWN_PROTOCOL                        = 83001;
-//! ����ǰ���ܵ�¼������
+//! 行情前置总登录数超限
 const int TAPIERROR_QUOTEFRONT_LOGIN_TOTALCOUNT                        = 83002;
-//! ���ĳ���������������
+//! 订阅超过订阅数量限制
 const int TAPIERROR_QUOTEFRONT_SUB_COUNT                               = 83003;
 
 /** @}*/
 
 //=============================================================================
 /**
- *	\addtogroup G_ERR_GATEWAY ���ط��ش�����	
+ *	\addtogroup G_ERR_GATEWAY 网关返回错误码	
  *	@{
  */
 //=============================================================================
-//! ��������ʧ��
+//! 发送数据失败
 const int TAPIERROR_ORDER_SEND                                         = 80001;
-//! ���ͱ���ʧ�ܣ�����û���ӵ�������
+//! 发送报单失败，网关没连接到交易所
 const int TAPIERROR_DLG_NULL                                           = 80002;
-//! �����ֶ�����
+//! 报单字段有误
 const int TAPIERROR_ORDER_FIELD                                        = 80003;
-//! �����־ܾ�
+//! 被上手拒绝
 const int TAPIERROR_TRADE_REJ_BYUPPER                                  = 80004;
-//! ��ǰʱ�䲻����������Ȩ����
+//! 当前时间不允许发送行权申请
 const int TAPIERROR_ORDER_FORBIDEXEC                                   = 80005;
 
 /** @}*/

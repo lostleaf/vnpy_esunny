@@ -1,12 +1,12 @@
 
-// vnesunnymd.cpp : ¶¨Òå DLL Ó¦ÓÃ³ÌĞòµÄµ¼³öº¯Êı¡£
+// vnesunnymd.cpp : å®šä¹‰ DLL åº”ç”¨ç¨‹åºçš„å¯¼å‡ºå‡½æ•°ã€‚
 //
 
 #include "vnesunnymd.h"
 
 
 ///-------------------------------------------------------------------------------------
-///C++µÄ»Øµ÷º¯Êı½«Êı¾İ±£´æµ½¶ÓÁĞÖĞ
+///C++çš„å›è°ƒå‡½æ•°å°†æ•°æ®ä¿å­˜åˆ°é˜Ÿåˆ—ä¸­
 ///-------------------------------------------------------------------------------------
 
 void MdApi::OnRspLogin(TAPIINT32 errorCode, const TapAPIQuotLoginRspInfo *info)
@@ -118,7 +118,7 @@ void MdApi::OnRtnQuote(const TapAPIQuoteWhole *info)
 
 
 ///-------------------------------------------------------------------------------------
-///¹¤×÷Ïß³Ì´Ó¶ÓÁĞÖĞÈ¡³öÊı¾İ£¬×ª»¯Îªpython¶ÔÏóºó£¬½øĞĞÍÆËÍ
+///å·¥ä½œçº¿ç¨‹ä»é˜Ÿåˆ—ä¸­å–å‡ºæ•°æ®ï¼Œè½¬åŒ–ä¸ºpythonå¯¹è±¡åï¼Œè¿›è¡Œæ¨é€
 ///-------------------------------------------------------------------------------------
 
 void MdApi::processTask()
@@ -485,7 +485,7 @@ void MdApi::processRtnQuote(Task *task)
 
 
 ///-------------------------------------------------------------------------------------
-///Ö÷¶¯º¯Êı
+///ä¸»åŠ¨å‡½æ•°
 ///-------------------------------------------------------------------------------------
 
 void MdApi::createTapQuoteAPI(const dict &req, int &iResult)
@@ -494,8 +494,8 @@ void MdApi::createTapQuoteAPI(const dict &req, int &iResult)
 	memset(&myreq, 0, sizeof(myreq));
 	getString(req, "AuthCode", myreq.AuthCode);
 	getString(req, "KeyOperationLogPath", myreq.KeyOperationLogPath);
-	this ->api = (ITapQuoteAPI*) CreateTapQuoteAPI(&myreq, iResult); // ´´½¨API½Ó¿Ú¶ÔÏó
-	this->api->SetAPINotify(this);  //×¢²á»Øµ÷º¯Êı¶ÔÏó
+	this ->api = (ITapQuoteAPI*) CreateTapQuoteAPI(&myreq, iResult); // åˆ›å»ºAPIæ¥å£å¯¹è±¡
+	this->api->SetAPINotify(this);  //æ³¨å†Œå›è°ƒå‡½æ•°å¯¹è±¡
 };
 
 void MdApi::release()
@@ -611,7 +611,7 @@ int MdApi::qryContract(int session, const dict &req)
 };
 
 ///-------------------------------------------------------------------------------------
-///Boost.Python·â×°
+///Boost.Pythonå°è£…
 ///-------------------------------------------------------------------------------------
 
 class PyMdApi : public MdApi

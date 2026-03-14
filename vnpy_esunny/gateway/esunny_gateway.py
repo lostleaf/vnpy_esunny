@@ -835,7 +835,7 @@ class TradeApi(TdApi):
 
         self.gateway.on_order(order)
 
-        return order.vt_orderid
+        return str(order.vt_orderid)
 
     def cancel_order(self, req: CancelRequest) -> None:
         """委托撤单"""

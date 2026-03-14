@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+recursive-include script *.py
+recursive-include vnpy_esunny *.py
+recursive-include vnpy_esunny/api *.h *.cpp *.so

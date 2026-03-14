@@ -21,20 +21,41 @@
 # SOFTWARE.
 
 
+import ctypes
 import os
 import sys
-
-# Windows: 穿透 API 会动态加载 TapDataCollectAPI.dll，需把包内 api 目录加入搜索路径，
-# 否则登录失败（除非把该 DLL 放到进程运行目录）
-if sys.platform == "win32":
-    _api_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), "api"))
-    if os.path.isdir(_api_dir):
-        os.add_dll_directory(_api_dir)
-        os.environ["PATH"] = _api_dir + os.pathsep + os.environ.get("PATH", "")
-
 from importlib import metadata
+from pathlib import Path
 
-from .gateway import EsunnyGateway
+
+def _preload_linux_runtime() -> None:
+    """Preload the SDK runtime library that is opened via dlopen()."""
+    if not sys.platform.startswith("linux"):
+        return
+
+    api_dir: Path = Path(__file__).resolve().parent / "api"
+    preload_path: Path = api_dir / "libTapDataCollectAPI.so"
+
+    if not preload_path.is_file():
+        raise FileNotFoundError(f"Missing runtime library: {preload_path}")
+
+    mode: int = getattr(os, "RTLD_NOW", 0) | getattr(os, "RTLD_GLOBAL", 0)
+    try:
+        ctypes.CDLL(str(preload_path), mode=mode)
+    except OSError as exc:
+        raise OSError(f"Failed to preload {preload_path.name}: {exc}") from exc
+
+
+_preload_linux_runtime()
+
+
+def _load_gateway() -> type:
+    from .gateway import EsunnyGateway as gateway_cls
+
+    return gateway_cls
+
+
+EsunnyGateway = _load_gateway()
 
 
 __all__ = ["EsunnyGateway"]
